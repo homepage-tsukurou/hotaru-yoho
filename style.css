@@ -150,17 +150,29 @@
   flex-direction:column;
   justify-content:flex-end;
   color:#fff;
-  background:
-    linear-gradient(180deg,rgba(20,42,31,.08),rgba(20,42,31,.84)),
-    url("images/nectar-flowers.png") center/cover;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
   scroll-snap-align:start;
 }
-.nectar-card:nth-child(2n){
-  background-position:35% center;
+.nectar-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(20,42,31,.06),rgba(20,42,31,.84));
+  pointer-events:none;
 }
-.nectar-card:nth-child(3n){
-  background-position:70% center;
+.nectar-card>*{
+  position:relative;
+  z-index:1;
 }
+.nectar-april{background-image:url("images/flowers-april.webp")}
+.nectar-may{background-image:url("images/flowers-may.webp")}
+.nectar-june{background-image:url("images/flowers-june.webp")}
+.nectar-july{background-image:url("images/flowers-july.webp")}
+.nectar-august{background-image:url("images/flowers-august.webp")}
+.nectar-september{background-image:url("images/flowers-september.webp")}
+.nectar-october{background-image:url("images/flowers-october.webp")}
 .nectar-card>span{
   position:absolute;
   top:24px;
