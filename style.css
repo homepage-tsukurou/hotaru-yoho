@@ -72,13 +72,19 @@
   border-right:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
-.quality-card>span{
-  color:var(--amber);
-  font-size:.68rem;
-  letter-spacing:.18em;
+.quality-icon{
+  width:155px;
+  height:155px;
+  margin-top:0;
+}
+.quality-icon img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 .quality-card h3{
-  margin:55px 0 18px;
+  margin:24px 0 18px;
   font:500 clamp(1.35rem,2vw,1.8rem) var(--serif);
   letter-spacing:.08em;
 }
@@ -228,7 +234,12 @@
     padding:32px 7vw;
   }
   .quality-card h3{
-    margin:28px 0 12px;
+    margin:20px 0 12px;
+  }
+  .quality-icon{
+    width:130px;
+    height:130px;
+    margin-top:0;
   }
   .nectar-track{
     grid-auto-columns:82%;
