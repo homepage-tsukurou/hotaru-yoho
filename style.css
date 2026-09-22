@@ -230,6 +230,59 @@
   overflow-wrap:anywhere;
   word-break:break-word;
 }
+.instagram-account{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.instagram-account svg,
+.footer-instagram svg{
+  width:24px;
+  height:24px;
+  flex:0 0 auto;
+  padding:3px;
+  border-radius:7px;
+  color:#fff;
+  background:radial-gradient(circle at 30% 105%,#ffd600 0 25%,#ff7a00 38%,#ff0169 62%,#d300c5 78%,#7638fa 100%);
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+}
+.instagram-account .instagram-dot,
+.footer-instagram .instagram-dot{
+  fill:currentColor;
+  stroke:none;
+}
+.contact-instagram strong{
+  font:500 .88rem var(--sans);
+  letter-spacing:.02em;
+}
+.contact-instagram:hover{
+  color:var(--amber);
+}
+.footer-instagram{
+  width:42px;
+  height:42px;
+  margin-left:12px;
+  border:0;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:radial-gradient(circle at 30% 105%,#ffd600 0 25%,#ff7a00 38%,#ff0169 62%,#d300c5 78%,#7638fa 100%);
+  transition:.25s ease;
+}
+.footer-instagram svg{
+  width:28px;
+  height:28px;
+  padding:2px;
+  background:none;
+}
+.footer-instagram:hover{
+  color:#fff;
+  transform:translateY(-2px) scale(1.04);
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
 
 @media(max-width:860px){
   .quality-grid{
