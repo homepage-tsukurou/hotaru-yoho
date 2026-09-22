@@ -52,6 +52,23 @@
   }
 }
 
+/* 瓶ラベルのマークを使ったブランドアイコン */
+.brand-mark{
+  width:46px;
+  height:46px;
+  border:2px solid rgba(255,255,255,.82);
+  border-radius:50%;
+  overflow:hidden;
+  background:#f8f3e9;
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+.brand-mark img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
 /* ほたる養蜂園が大切にしている3つのこと */
 .quality{
   background:var(--paper-light);
