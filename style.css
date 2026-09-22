@@ -224,6 +224,12 @@
 .contact-details span{
   font-size:.82rem;
 }
+.contact-details .contact-email strong{
+  font:500 clamp(.82rem,2vw,1rem) var(--sans);
+  letter-spacing:0;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
 
 @media(max-width:860px){
   .quality-grid{
@@ -289,4 +295,89 @@
   color:var(--green);
   font:500 clamp(1.15rem,2vw,1.55rem) var(--serif);
   letter-spacing:.1em;
+}
+
+body{
+  line-break:strict;
+  word-break:normal;
+  overflow-wrap:break-word;
+}
+.heading-line{
+  display:inline-block;
+  white-space:nowrap;
+}
+.keep-together{
+  white-space:nowrap;
+}
+
+/* PCでは写真と文章枠を重ねず、上下をきれいに揃える */
+@media(min-width:861px){
+  .story-split{
+    grid-template-columns:1fr 1fr;
+    align-items:stretch;
+  }
+  .photo-beekeeper{
+    height:auto;
+    min-height:690px;
+  }
+  .story-card{
+    margin-left:0;
+    padding:clamp(44px,5vw,70px) clamp(28px,5vw,7vw);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .story-card h2{
+    font-size:clamp(1.65rem,3.1vw,3.35rem);
+  }
+  .experience{
+    min-height:720px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:stretch;
+    background:var(--green-dark);
+  }
+  .photo-experience{
+    position:relative;
+    inset:auto;
+    min-height:720px;
+    background-image:linear-gradient(90deg,rgba(23,43,34,.08),rgba(23,43,34,.16)),url("images/beekeeper-inspection.png");
+  }
+  .experience-panel{
+    width:auto;
+    margin:0;
+    padding:clamp(44px,5vw,70px) clamp(28px,5vw,7vw);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .experience-panel h2{
+    font-size:clamp(1.65rem,3.1vw,3.35rem);
+  }
+  .story-card>p,
+  .experience-panel>p{
+    text-wrap:pretty;
+  }
+}
+
+@media(max-width:860px){
+  .intro{
+    grid-template-columns:1fr;
+    padding-left:7vw;
+  }
+  .vertical-note{
+    display:none;
+  }
+  .section h2,
+  .shop h2{
+    font-size:clamp(1.35rem,6vw,1.7rem);
+    line-height:1.65;
+    letter-spacing:.04em;
+  }
+  .story-card h2{
+    font-size:clamp(1.3rem,5.8vw,1.6rem);
+  }
+  .heading-line{
+    max-width:100%;
+  }
 }
