@@ -69,6 +69,24 @@
   object-fit:cover;
 }
 
+/* Squareオンラインショップへの導線 */
+.shop-link{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  margin-top:30px;
+  padding:13px 28px;
+  border:1px solid currentColor;
+  font-size:.78rem;
+  letter-spacing:.12em;
+  transition:.25s ease;
+}
+.shop-link:hover{
+  color:#fff;
+  background:var(--green);
+  border-color:var(--green);
+}
+
 /* ほたる養蜂園が大切にしている3つのこと */
 .quality{
   background:var(--paper-light);
